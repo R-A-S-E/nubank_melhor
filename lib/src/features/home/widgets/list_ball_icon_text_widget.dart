@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_melhor/src/pages/home/widgets/ball_icon_text_widget.dart';
+import 'package:nubank_melhor/src/features/home/widgets/ball_icon_text_widget.dart';
 
 class ListBallIconText extends StatelessWidget {
   const ListBallIconText({
@@ -16,7 +16,10 @@ class ListBallIconText extends StatelessWidget {
         children: const [
           BallIconText(icon: Icons.pix, text: 'Pix'),
           BallIconText(icon: Icons.abc_outlined, text: 'Pagar'),
-          BallIconText(icon: Icons.workspaces_filled, text: 'Pegar Emprestimo'),
+          BallIconText(
+              icon: Icons.workspaces_filled,
+              text: 'Pegar Emprestimo',
+              value: 'R\$12.000'),
           BallIconText(icon: Icons.access_alarms_sharp, text: 'Transferir'),
           BallIconText(icon: Icons.account_balance_rounded, text: 'Dinheiro'),
           BallIconText(icon: Icons.accessibility_new, text: 'Problema'),

@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class AppBarHome extends StatelessWidget {
   final VoidCallback onTapVisibility;
   final bool isVisibility;
-  const AppBarHome({
-    Key? key,
-    required this.onTapVisibility,
-    required this.isVisibility,
-  }) : super(key: key);
+  final String? name;
+  const AppBarHome(
+      {Key? key,
+      required this.onTapVisibility,
+      required this.isVisibility,
+      this.name})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +31,11 @@ class AppBarHome extends StatelessWidget {
                       color: Colors.purple.shade300,
                       borderRadius: BorderRadius.circular(60),
                     ),
-                    child:
-                        const Icon(Icons.person_outline, color: Colors.white),
+                    child: isVisibility
+                        ? const Icon(Icons.person_outline, color: Colors.white)
+                        : const Image(
+                            image: NetworkImage(
+                                'https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg')),
                   ),
                   Row(
                     children: [
@@ -51,18 +56,19 @@ class AppBarHome extends StatelessWidget {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                "Olá, Rafael",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.5,
+            if (name != null)
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  "Olá, $name",
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.5,
+                  ),
                 ),
-              ),
-            )
+              )
           ],
         ),
       ),

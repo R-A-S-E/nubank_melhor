@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_melhor/src/pages/home/home_page.dart';
+import 'package:nubank_melhor/src/features/home/pages/home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
