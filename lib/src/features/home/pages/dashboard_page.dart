@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_melhor/src/features/home/widgets/appbar_home_widget.dart';
 import 'package:nubank_melhor/src/features/home/widgets/button_status_widget.dart';
+import 'package:nubank_melhor/src/features/home/widgets/card_text_widget.dart';
 import 'package:nubank_melhor/src/features/home/widgets/extrato_button_widget.dart';
 import 'package:nubank_melhor/src/features/home/widgets/list_ball_icon_text_widget.dart';
 
@@ -36,6 +37,9 @@ class _DashBoardPageState extends State<DashBoardPage> {
             icon: Icons.access_time_filled,
             text: 'Meus Cartões',
           ),
+          CardText(
+            text: 'asdasd',
+          )
         ]),
       ),
     );
