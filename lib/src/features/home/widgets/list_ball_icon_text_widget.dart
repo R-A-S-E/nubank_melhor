@@ -14,7 +14,10 @@ class ListBallIconText extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: const [
-          BallIconText(icon: Icons.pix, text: 'Pix'),
+          BallIconText(
+            icon: Icons.pix,
+            text: 'Pix',
+          ),
           BallIconText(icon: Icons.abc_outlined, text: 'Pagar'),
           BallIconText(
               icon: Icons.workspaces_filled,

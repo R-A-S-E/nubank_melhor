@@ -5,10 +5,12 @@ class BallIconText extends StatelessWidget {
   final IconData icon;
   final String text;
   final String? value;
+  final VoidCallback? onTap;
   const BallIconText({
     Key? key,
     required this.icon,
     required this.text,
+    this.onTap,
     this.value,
   }) : super(key: key);
 
@@ -25,7 +27,13 @@ class BallIconText extends StatelessWidget {
                 borderRadius: BorderRadius.circular(60),
                 color: Colors.grey.shade300,
               ),
-              child: Icon(icon),
+              child: Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(60),
+                    onTap: onTap,
+                    child: Icon(icon),
+                  )),
             ),
             if (value != null)
               Positioned(
